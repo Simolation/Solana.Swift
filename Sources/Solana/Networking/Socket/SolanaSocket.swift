@@ -127,6 +127,10 @@ public class SolanaSocket {
 
 extension SolanaSocket: WebSocketDelegate {
 
+    public func didReceive(event: WebSocketEvent, client: WebSocketClient) {
+        
+    }
+
     public func didReceive(event: WebSocketEvent, client: WebSocket) {
         log(event: event)
         switch event {
@@ -145,6 +149,8 @@ extension SolanaSocket: WebSocketDelegate {
         case .error(let error): break
             self.delegate?.error(error: error)
         }
+        default:
+            print("")
     }
 
     private func log(event: WebSocketEvent) {
