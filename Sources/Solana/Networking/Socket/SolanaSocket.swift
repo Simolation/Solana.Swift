@@ -175,6 +175,8 @@ extension SolanaSocket: WebSocketDelegate {
             if enableDebugLogs { debugPrint("cancelled") }
         case .error(let error):
             if enableDebugLogs { debugPrint("error \(error?.localizedDescription ?? "")") }
+        default:
+            print("")
         }
     }
 
