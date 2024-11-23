@@ -148,9 +148,9 @@ extension SolanaSocket: WebSocketDelegate {
         case .cancelled: break
         case .error(let error): break
             self.delegate?.error(error: error)
-        }
         default:
             print("")
+        }
     }
 
     private func log(event: WebSocketEvent) {
